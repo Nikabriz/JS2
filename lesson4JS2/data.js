@@ -8,10 +8,10 @@ function replace_text(node) {
 
         if (node.nodeType == 3) { 
             if (node.textContent) { 
-                node.textContent = node.textContent.replace(/"/g, '\'', '&quot;');
+                node.textContent = node.textContent.replace(/'/g, '\"', '&quot;');
             }
             else { 
-                node.nodeValue = node.nodeValue.replace(/"/g, '&quot;');
+                node.nodeValue = node.nodeValue.replace(/'/g, '&quot;');
             }
         } else { 
             replace_text(node);
